@@ -300,6 +300,10 @@ img {
   transform: scale(1);
 }
 
+
+
+
+
 /* Animating the shapes */
 
 /* Shape 1 */
@@ -333,6 +337,9 @@ img {
 .portfolio-item:hover .shape3 {
   transform: scale(1) translate(0px, 0px) rotatez(20deg);
 }
+
+
+
 
 /* Technologies */
 .html5 {
