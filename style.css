@@ -1,0 +1,374 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* End of CSS Reset */
+
+body {
+  font-family: "Mulish", sans-serif;
+  font-weight: regular;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+p {
+  margin-bottom: 30px;
+  font-size:20px;
+  color:#444;
+}
+
+img {
+  max-width: 100%;
+}
+
+.for-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.portfolio-section {
+  max-width: 1800px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.portfolio-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.section-content {
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+}
+
+.portfolio-item {
+  position: relative;
+  padding-top: 200px;
+}
+
+.overlay-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* View Icon Styles */
+
+.view-icon {
+  color: white;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  background-color: #da2e81;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.view-icon:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 125%;
+  height: 125%;
+  border: 2px solid#da2e81;
+}
+
+.view-icon,
+.view-icon:before {
+  border-radius: 50%;
+}
+
+/* Technology Images */
+
+.technologies {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* Shapes */
+
+.shape1 {
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 10px solid #da2e81;
+  background-color: transparent;
+  right: 20px;
+  top: 25%;
+}
+
+.shape2 {
+  display: block;
+  position: absolute;
+  background-color: #da2e81;
+  width: 50px;
+  height: 50px;
+  top: 30%;
+  left: 25%;
+}
+
+.shape3 {
+  display: block;
+  position: absolute;
+  background-color: #da2e81;
+  width: 25px;
+  height: 25px;
+  top: 20px;
+  right: 30%;
+}
+
+/* Hover animation */
+
+.technologies img,
+.shape1,
+.shape2,
+.shape3,
+.view-icon {
+  opacity: 0;
+  transition-duration: 0.2s;
+}
+
+.portfolio-item:hover * {
+  opacity: 1;
+}
+
+/* Animating the view icon */
+
+.view-icon {
+  transform: scale(0.8);
+}
+
+.portfolio-item:hover .view-icon {
+  transform: scale(1);
+}
+
+/* Animating the shapes */
+
+/* Shape 1 */
+.shape1 {
+  transform: scale(0.9) translate(50px, -50px) rotatez(0deg);
+  transition-duration: 0.5s;
+}
+
+.portfolio-item:hover .shape1 {
+  transform: scale(1) translate(0px, 0px) rotatez(20deg);
+}
+
+/* Shape 2 */
+.shape2 {
+  transform: scale(0.9) translate(-25px, -25px) rotatez(0deg);
+  transition-duration: 0.4s;
+  transition-delay: 0.1s;
+}
+
+.portfolio-item:hover .shape2 {
+  transform: scale(1) translate(0px, 0px) rotatez(20deg);
+}
+
+/* Shape 3 */
+.shape3 {
+  transform: scale(0.9) translate(-10px, 10px) rotatez(0deg);
+  transition-duration: 0.3s;
+  transition-delay: 0.2s;
+}
+
+.portfolio-item:hover .shape3 {
+  transform: scale(1) translate(0px, 0px) rotatez(20deg);
+}
+
+/* Technologies */
+.html5 {
+  transform: scale(0.8) translate(100px, 100px) rotatez(0deg);
+}
+
+.portfolio-item:hover .html5 {
+  transform: scale(1) translate(0px, 0px) rotatez(-20deg);
+}
+
+/* js */
+.js {
+  transform: scale(0.8) translate(0, 100px);
+}
+
+.portfolio-item:hover .js {
+  transform: scale(1) translate(0px, -20px);
+  transition-delay: 0.3s;
+}
+
+/* html5 */
+.html5 {
+  transform: scale(0.8) translate(100px, 100px) rotatez(0deg);
+}
+
+.portfolio-item:hover .html5 {
+  transform: scale(1) translate(0px, 30px) rotatez(-20deg);
+  transition-delay: 0.4s;
+}
+
+/* css3 */
+.css3 {
+  transform: scale(0.8) translate(-100px, 100px) rotatez(0deg);
+}
+
+.portfolio-item:hover .css3 {
+  transform: scale(1) translate(0px, 30px) rotatez(20deg);
+  transition-delay: 0.5s;
+}
